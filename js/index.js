@@ -74,9 +74,25 @@ document.getElementById('textArea1').addEventListener('input', function () {
     document.getElementById('textAreaLabel').textContent = "Any comments? Character count: " + count;
 })
 
-//nested
-
-
+//nested stop propagation
+let signupForm1 = document.getElementById('signup-form').addEventListener('click', function (event) {
+    alert('form clicked')
+});
+let textInput1 = document.querySelectorAll('input')[0].addEventListener('click', function (event) {
+    event.stopPropagation();
+});
+let textInput2 = document.querySelectorAll('input')[1].addEventListener('click', function (event) {
+    event.stopPropagation();
+});
+let textInput3 = document.querySelectorAll('input')[2].addEventListener('click', function (event) {
+    event.stopPropagation();
+});
+let textInput4 = document.querySelectorAll('input')[3].addEventListener('click', function (event) {
+    event.stopPropagation();
+});
+let textarea = document.querySelectorAll('textarea')[0].addEventListener('click', function (event) {
+    event.stopPropagation();
+});
 //stop nav
 let testNav = document.querySelectorAll(".nav-link")
 for (let i = 0; i < testNav.length; i++) {
