@@ -18,4 +18,26 @@ let islandSignUpBtn = document.getElementById("islandSignUp").addEventListener("
     event.target.innerText = "Wait! Come back!"
   })
 
-  
+  //Scrolling fun
+let pageScroll = document.addEventListener("scroll", function(event){
+    var alerted = sessionStorage.getItem('alerted') || '';
+    if (alerted != 'yes') {
+     alert("Wait! Close this alert and then press Shift + D ;)");
+     sessionStorage.setItem('alerted','yes');
+    }
+})
+
+//Dark Mode (Press Shift + d)
+let darkMode = document.addEventListener("keydown", function(event){
+    if (event.key === 'D') {
+        document.getElementById("body").style.background = 'black';
+        document.getElementById("body").style.color = 'white';
+        document.getElementById("main-nav").style.background = 'black';
+        let x = document.querySelectorAll(".nav-link")
+        for (let i = 0; i < x.length; i++) {
+            x[i].style.color = 'white';
+        };
+        alert("Activated secret dark mode!");
+    }
+})
+
