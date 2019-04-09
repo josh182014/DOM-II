@@ -236,6 +236,11 @@ img {
   height: 30px;
   margin-bottom: 15px;
 }
+.home textarea {
+  width: 100%;
+  height: 125px;
+  resize: none;
+}
 .home .message {
   height: 90px;
 }

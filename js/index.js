@@ -1,11 +1,11 @@
 // Your code goes here
 
-// 1. Fun in the Sun button alert
+// 1. *click* Fun in the Sun button alert
 document.getElementById("funSignUp").addEventListener("click", function(event){
     alert("Fun In The Sun is currently full! Please try again at a later date!")
 });
 
-// 2. Mountain Excursion mouseover and mouse leave events
+// 2. *mouseover* Mountain Excursion mouseover and mouse leave events
 let mtnSignUpBtn = document.getElementById("mtnSignUp").addEventListener("mouseover", function(event){
     event.target.innerText = "Pick Me!";
   });
@@ -13,12 +13,12 @@ document.getElementById("mtnSignUp").addEventListener("mouseleave", function(eve
     event.target.innerText = "ok bye then"
   });
 
-// 3. Island Getaway mouseleave event
+// 3. *mouseleave* Island Getaway mouseleave event
 let islandSignUpBtn = document.getElementById("islandSignUp").addEventListener("mouseleave", function(event){
     event.target.innerText = "Wait! Come back!"
   })
 
-// 4. Scrolling fun
+// 4. *scroll* Scrolling fun
 let pageScroll = document.addEventListener("scroll", function(event){
     var alerted = sessionStorage.getItem('alerted') || '';
     if (alerted != 'yes') {
@@ -27,7 +27,7 @@ let pageScroll = document.addEventListener("scroll", function(event){
     }
 })
 
-// 5. Secret Dark Mode (Press Shift + d)
+// 5. *keydown* Secret Dark Mode (Press Shift + d)
 let darkMode = document.addEventListener("keydown", function(event){
     if (event.key === 'D') {
         document.getElementById("body").style.background = 'black';
@@ -41,31 +41,38 @@ let darkMode = document.addEventListener("keydown", function(event){
     }
 })
 
-// 6. page load alert #annoying
+// 6. *load* page load alert #annoying
 window.addEventListener('load', function(event) {
-    alert("page is loaded lol hi there :)")
+    var alerted1 = sessionStorage.getItem('alerted1') || '';
+    if (alerted1 != 'yes') {
+     alert("page is loaded lol hi there :)");
+     sessionStorage.setItem('alerted1','yes');
+    }
 });
 
-// 7. phone input focus
+// 7. *focus* phone input focus
 const phone = document.querySelector('input[type="tel"]');
 
 phone.addEventListener('focus', (event) => {
   event.target.style.background = 'pink';    
 });
 
-// 8. phone input blur
+// 8. *blur* phone input blur
 phone.addEventListener('blur', (event) => {
     event.target.style.background = '';    
 });
 
-// 9. prevents form submit button from doing anything
-const subButton = document.getElementById("submitButton").addEventListener('click', function(event) {
+// 9. *submit* prevents form submit button from doing anything
+const subButton = document.getElementById("signup-form").addEventListener('submit', function(event) {
     event.preventDefault();
 })
 
-// 10.
-
-
+// 10. *input* gets word count
+document.getElementById('textArea1').addEventListener('input', function () {
+    var text = this.value,
+    count = text.split('').length;
+    document.getElementById('textAreaLabel').textContent = "Any comments? Character count: " + count;
+})
 
 //nested
 
