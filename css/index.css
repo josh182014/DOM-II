@@ -226,6 +226,53 @@ img {
   font-size: 1.6rem;
   padding: 20px;
 }
+.home label {
+  font-size: 1.6rem;
+  padding-bottom: 10px;
+}
+.home input {
+  justify-content: space-between;
+  width: 100%;
+  height: 30px;
+  margin-bottom: 15px;
+}
+.home textarea {
+  width: 100%;
+  height: 125px;
+  resize: none;
+}
+.home .message {
+  height: 90px;
+}
+.home .destinationForm {
+  display: flex;
+  flex-wrap: wrap;
+  width: 40%;
+}
+.home .btn {
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 45px;
+  background-color: #17A2B8;
+  color: #FFFFFF;
+  border: 1px solid #C0C0C0;
+  cursor: pointer;
+  font-size: 1.8rem;
+}
+@media (max-width: 500px) {
+  .home .btn {
+    width: 100%;
+  }
+}
+.home .btn:hover {
+  background: #FFFFFF;
+  color: #17A2B8;
+}
 .home .intro {
   padding: 90px 0 10px;
   border-bottom: 2px dashed #C0C0C0;
